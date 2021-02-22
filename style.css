@@ -1,4 +1,10 @@
 /* mobile-first */
+
+:root {
+    --primary: #2c3e50;
+    --secondary: #DBDBDB;
+}
+
 *, *::before, *::after {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
@@ -19,7 +25,7 @@ a {
 }
 
 .topbar {
-    background: #2c3e50;
+    background: var(--primary);
     color: #fff;
 }
 
@@ -115,7 +121,7 @@ a {
 
 .sidebar a:hover, .sidebar a.active {
     color: #000;
-    border: solid 1px #DBDBDB;
+    border: solid 1px var(--secondary);
     border-radius: 3px;
     background: #FFF;
     font-weight: bold;
@@ -130,7 +136,7 @@ a {
 }
 
 .card {
-    border: solid 1px #DBDBDB;
+    border: solid 1px var(--secondary);
     border-radius: 3px;
     background: #FFF;
     margin-bottom: 15px;
@@ -177,7 +183,7 @@ a {
 }
 
 .card-body a {
-    color: #2c3e50;
+    color: var(--primary);
     text-decoration: underline;
 }
 
@@ -197,14 +203,14 @@ a {
 }
 
 .card-footer {
-    border-top: solid 1px #DBDBDB;
+    border-top: solid 1px var(--secondary);
     background: #FBFBFB;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     padding: 10px;
     font-size: 12px;
-    color: #DBDBDB;
+    color: var(--secondary);
 }
 
 .card-footer a:hover {
@@ -215,20 +221,12 @@ a {
     margin-left: auto;
 }
 
-.card-like::before, .card-comments::before {
-    content: '';
-    display: inline-block;
+.card-like svg, .card-comments svg {
     vertical-align: middle;
-    margin-right: 5px;
     width: 20px;
     height: 20px;
-    -webkit-filter: invert(50%) sepia(100%) saturate(2000%) hue-rotate(180deg) brightness(25%) contrast(100%);
-            filter: invert(50%) sepia(100%) saturate(2000%) hue-rotate(180deg) brightness(25%) contrast(100%);
-    background: url('assets/icons/thumb_up_off_alt-24px.svg') center center / 20px 18px no-repeat;
-}
-
-.card-comments::before {
-    background: url('assets/icons/comment-24px.svg') center center / 20px 18px no-repeat;
+    margin-right: 5px;
+    fill: var(--primary);
 }
 
 .sidebar-title {
@@ -294,16 +292,12 @@ a {
     margin-bottom: 3px;
 }
 
-.friend-add::before {
-    content: '';
-    display: inline-block;
+.friend-add svg {
+    fill: var(--primary);
     vertical-align: middle;
     margin-right: 5px;
     width: 18px;
     height: 13px;
-    -webkit-filter: invert(50%) sepia(100%) saturate(2000%) hue-rotate(180deg) brightness(25%) contrast(100%);
-            filter: invert(50%) sepia(100%) saturate(2000%) hue-rotate(180deg) brightness(25%) contrast(100%);
-    background: url('assets/icons/person_add-24px.svg') center center / 18px 13px no-repeat;
     margin-right: 5px;
     -webkit-transform: translateY(-1px);
         -ms-transform: translateY(-1px);
